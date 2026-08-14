@@ -1,6 +1,14 @@
 import type { Request, Response, NextFunction } from 'express';
 import type { ILogger } from '@testpilot/contracts';
 import type { ApiResponse } from './types';
+import { randomUUID } from 'node:crypto';
+
+export function securityHeaders(_req: Request, res: Response, next: NextFunction) {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('Referrer-Policy', 'no-referrer');
+  next();
+}
 
 /**
  * Request logging middleware
@@ -27,21 +35,24 @@ export function loggingMiddleware(logger: ILogger) {
  */
 export function errorHandler(logger: ILogger) {
   return (err: any, _req: Request, res: Response, _next: NextFunction) => {
-    const code = err.code || 'INTERNAL_SERVER_ERROR';
-    const message = err.message || 'An unexpected error occurred';
+    const code = typeof err?.code === 'string' && /^[A-Z0-9_]{3,64}$/.test(err.code) ? err.code : 'INTERNAL_SERVER_ERROR';
+    const safeCodes = new Set(['INVALID_CONTENT_TYPE', 'INVALID_INPUT', 'INVALID_COMPARISON', 'PROFILE_NOT_FOUND', 'SNAPSHOT_NOT_FOUND', 'APPLICATION_PROFILE_NOT_FOUND', 'INVALID_SNAPSHOT', 'PERSISTENCE_FAILED', 'APPLICATION_INTELLIGENCE_INVALID']);
+    const message = safeCodes.has(code) && typeof err?.message === 'string' ? err.message : 'An unexpected error occurred';
     const status = err.status || 500;
+    const requestId = randomUUID();
 
-    logger.error(`API Error: ${message}`, err);
+    logger.error('API Error', undefined, { code, status, requestId });
 
     const response: ApiResponse = {
       success: false,
       error: {
         code,
         message,
-        details: process.env.NODE_ENV === 'development' ? err.details : undefined,
+        details: undefined,
       },
       meta: {
         timestamp: new Date().toISOString(),
+        requestId,
       },
     };
 

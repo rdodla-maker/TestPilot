@@ -3,6 +3,9 @@ import type { ExecutionContext, WorkflowId, WorkflowInput } from '@testpilot/con
 import { WorkflowError, ResultStatus } from '@testpilot/contracts';
 import { EnvironmentDiscoveryAgent } from '@testpilot/agents-environment-discovery';
 import type { EnvironmentDiscoveryInput, EnvironmentDiscoveryOutput } from '@testpilot/agents-environment-discovery';
+import { ApplicationUnderstandingAgent, buildApplicationIntelligenceSnapshot } from '@testpilot/agents-application-understanding';
+import type { ApplicationUnderstandingResult, ApplicationUnderstandingRequest, ApplicationIntelligenceSnapshot } from '@testpilot/contracts';
+import { createDefaultApplicationProfileService, type ApplicationProfileService, type IntelligenceSnapshotRecord } from '@testpilot/database';
 
 /**
  * Input to environment discovery workflow
@@ -19,6 +22,14 @@ export interface EnvironmentDiscoveryWorkflowInput extends WorkflowInput {
 export interface EnvironmentDiscoveryWorkflowOutput {
   projectId: string;
   discovery: EnvironmentDiscoveryOutput;
+  understanding?: ApplicationUnderstandingResult;
+  intelligence?: ApplicationIntelligenceSnapshot;
+  persistence?: {
+    status: 'persisted' | 'failed';
+    applicationId: string;
+    snapshotId?: string;
+    snapshotVersion?: number;
+  };
 }
 
 /**
@@ -30,8 +41,10 @@ export class EnvironmentDiscoveryWorkflow extends BaseWorkflow<
   EnvironmentDiscoveryWorkflowOutput
 > {
   private agent: EnvironmentDiscoveryAgent;
+  private understandingAgent: ApplicationUnderstandingAgent;
+  private profileService: ApplicationProfileService;
 
-  constructor() {
+  constructor(profileService?: ApplicationProfileService) {
     const id = 'environment-discovery-workflow' as WorkflowId;
     const name = 'Environment Discovery Workflow';
     const description =
@@ -39,6 +52,8 @@ export class EnvironmentDiscoveryWorkflow extends BaseWorkflow<
     super(id, name, description);
 
     this.agent = new EnvironmentDiscoveryAgent();
+    this.understandingAgent = new ApplicationUnderstandingAgent();
+    this.profileService = profileService || createDefaultApplicationProfileService();
   }
 
   protected async onExecute(
@@ -90,10 +105,105 @@ export class EnvironmentDiscoveryWorkflow extends BaseWorkflow<
 
       const discovery = (agentResult.data || agentResult) as any as EnvironmentDiscoveryOutput;
 
+      // Call Application Understanding agent with Level 1.2 evidence
+      if (!discovery.applicationMetadata) {
+        throw new WorkflowError('Application metadata was not produced by environment discovery');
+      }
+
+      const understandingRequest: ApplicationUnderstandingRequest = {
+        projectId: input.projectId,
+        applicationMetadata: discovery.applicationMetadata,
+        environmentObservation: discovery.observation,
+      };
+
+      const understandingRes = await this.understandingAgent.execute(understandingRequest as any, context as any);
+      const understanding = (understandingRes && (understandingRes as any).data?.result) as ApplicationUnderstandingResult | undefined;
+      if (!understanding) {
+        throw new WorkflowError('Application understanding was not produced');
+      }
+
+      const intelligenceStartedAt = Date.now();
+      context.logger.info('Application intelligence generation started', {
+        executionId: context.executionId,
+        schemaVersion: '1.0',
+      });
+      let intelligence: ApplicationIntelligenceSnapshot;
+      try {
+        intelligence = buildApplicationIntelligenceSnapshot({
+          projectId: input.projectId,
+          sourceExecutionId: context.executionId,
+          metadata: discovery.applicationMetadata,
+          understanding,
+        });
+      } catch (error) {
+        context.logger.error('Application intelligence validation failed', error as Error, {
+          executionId: context.executionId,
+          schemaVersion: '1.0',
+          validation: 'failed',
+        });
+        throw error;
+      }
+      context.logger.info('Application intelligence generation completed', {
+        executionId: context.executionId,
+        schemaVersion: intelligence.schemaVersion,
+        durationMs: Date.now() - intelligenceStartedAt,
+        validation: 'passed',
+        pages: intelligence.pages.length,
+        roles: intelligence.roles.length,
+        features: intelligence.features.length,
+        workflows: intelligence.workflows.length,
+        risks: intelligence.risks.length,
+        evidence: intelligence.evidence.length,
+        snapshotBytes: Buffer.byteLength(JSON.stringify(intelligence)),
+        truncated: intelligence.truncated,
+      });
+      if (intelligence.truncated) {
+        context.logger.warn('Application intelligence snapshot truncated', {
+          executionId: context.executionId,
+          schemaVersion: intelligence.schemaVersion,
+          truncation: intelligence.truncation,
+        });
+      }
+
+      context.logger.info('Application intelligence persistence started', {
+        executionId: context.executionId,
+        applicationId: input.projectId,
+      });
+      await this.profileService.createOrUpdateProfile({
+        id: input.projectId,
+        name: intelligence.application.name.value,
+        targetUrls: intelligence.pages.map((page) => page.url),
+      });
+      let persisted: IntelligenceSnapshotRecord;
+      try {
+        persisted = await this.profileService.persistSnapshot(input.projectId, context.executionId, intelligence);
+      } catch (error) {
+        context.logger.error('Application intelligence persistence failed', error as Error, {
+          executionId: context.executionId,
+          applicationId: input.projectId,
+        });
+        throw error;
+      }
+      context.logger.info('Application intelligence persistence completed', {
+        executionId: context.executionId,
+        applicationId: input.projectId,
+        snapshotId: persisted.id,
+        snapshotVersion: persisted.snapshotVersion,
+        snapshotBytes: persisted.metadata.snapshotBytes,
+      });
+
       return {
         projectId: input.projectId,
         discovery,
-      };
+        understanding,
+        intelligence,
+        persistence: {
+          status: 'persisted',
+          applicationId: input.projectId,
+          snapshotId: persisted.id,
+          snapshotVersion: persisted.snapshotVersion,
+        },
+      } as any;
     } catch (error) {
       context.logger.error('Environment Discovery Workflow failed', error as Error, {
         workflowId: this.id,

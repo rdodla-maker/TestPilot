@@ -13,6 +13,7 @@ export interface BrowserConfig {
   timeout: number;
   slowMo: number;
   devtools: boolean;
+  allowLocalTargets: boolean;
 }
 
 /**
@@ -52,6 +53,7 @@ export interface AppConfig {
   api: ApiConfig;
   logging: LoggingConfig;
   metadataLimits?: MetadataLimits;
+  intelligenceLimits?: IntelligenceLimits;
 }
 
 export interface MetadataLimits {
@@ -61,6 +63,17 @@ export interface MetadataLimits {
   maxImages: number;
   maxHeadings: number;
   maxForms: number;
+}
+
+export interface IntelligenceLimits {
+  maxPages: number;
+  maxFeatures: number;
+  maxWorkflows: number;
+  maxRoles: number;
+  maxRisks: number;
+  maxEvidence: number;
+  maxStringLength: number;
+  maxSnapshotBytes: number;
 }
 
 /**
@@ -76,6 +89,7 @@ export function loadConfig(): AppConfig {
       timeout: parseInt(process.env.BROWSER_TIMEOUT || '30000', 10),
       slowMo: parseInt(process.env.BROWSER_SLOW_MO || '0', 10),
       devtools: process.env.BROWSER_DEVTOOLS === 'true',
+      allowLocalTargets: process.env.BROWSER_ALLOW_LOCAL_TARGETS === 'true',
     },
     orchestrator: {
       maxRetries: parseInt(process.env.ORCHESTRATOR_MAX_RETRIES || '3', 10),
@@ -100,6 +114,16 @@ export function loadConfig(): AppConfig {
       maxHeadings: parseInt(process.env.METADATA_MAX_HEADINGS || '200', 10),
       maxForms: parseInt(process.env.METADATA_MAX_FORMS || '50', 10),
     },
+    intelligenceLimits: {
+      maxPages: parseInt(process.env.INTELLIGENCE_MAX_PAGES || '50', 10),
+      maxFeatures: parseInt(process.env.INTELLIGENCE_MAX_FEATURES || '100', 10),
+      maxWorkflows: parseInt(process.env.INTELLIGENCE_MAX_WORKFLOWS || '50', 10),
+      maxRoles: parseInt(process.env.INTELLIGENCE_MAX_ROLES || '25', 10),
+      maxRisks: parseInt(process.env.INTELLIGENCE_MAX_RISKS || '50', 10),
+      maxEvidence: parseInt(process.env.INTELLIGENCE_MAX_EVIDENCE || '500', 10),
+      maxStringLength: parseInt(process.env.INTELLIGENCE_MAX_STRING_LENGTH || '500', 10),
+      maxSnapshotBytes: parseInt(process.env.INTELLIGENCE_MAX_SNAPSHOT_BYTES || '200000', 10),
+    },
   };
 }
 
@@ -110,6 +134,9 @@ export function getBrowserConfig(): BrowserConfig {
   return loadConfig().browser;
 }
 
+export function getIntelligenceLimits(): IntelligenceLimits {
+  return loadConfig().intelligenceLimits as IntelligenceLimits;
+}
 /**
  * Get orchestrator configuration
  */

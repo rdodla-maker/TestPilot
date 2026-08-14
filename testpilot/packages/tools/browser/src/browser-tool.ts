@@ -2,8 +2,9 @@ import { BaseTool } from '@testpilot/core';
 import type { ExecutionContext, ToolInputSchema, ToolOutputSchema, ToolResult, ToolId } from '@testpilot/contracts';
 import { ValidationError, BrowserError, ErrorCode } from '@testpilot/contracts';
 import { chromium, Browser, BrowserContext, Page } from 'playwright';
-import type { BrowserToolInput, BrowserToolOutput, PageObservation } from './types';
-import { isValidUrl } from './url-validator';
+import type { BrowserToolInput, BrowserToolOutput, PageObservation } from './types.js';
+import { isSafeTargetUrl } from './url-validator.js';
+import { getBrowserConfig } from '@testpilot/config';
 
 /**
  * Browser tool for web observation
@@ -153,8 +154,8 @@ export class BrowserTool extends BaseTool {
       throw new ValidationError('URL is required and must be a non-empty string');
     }
 
-    if (!isValidUrl(url)) {
-      throw new ValidationError('Invalid URL format', { url });
+    if (!isSafeTargetUrl(url, getBrowserConfig().allowLocalTargets)) {
+      throw new ValidationError('URL is not an allowed target', { url });
     }
 
     return {
@@ -210,6 +211,9 @@ export class BrowserTool extends BaseTool {
             statusText: response.statusText(),
             url: response.url(),
           };
+        }
+        if (!isSafeTargetUrl(page.url(), getBrowserConfig().allowLocalTargets)) {
+          throw new BrowserError(ErrorCode.NavigationFailed, 'Redirected to a blocked target', { url: page.url() });
         }
       } catch (navigationError) {
         console.info(JSON.stringify({ event: 'browser.navigation.error', tool: this.id, executionId: context.executionId, error: (navigationError as Error).message, timestamp: new Date().toISOString() }));

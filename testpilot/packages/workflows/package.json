@@ -14,7 +14,9 @@
   "dependencies": {
     "@testpilot/contracts": "*",
     "@testpilot/core": "*",
-    "@testpilot/agents-environment-discovery": "*"
+    "@testpilot/agents-environment-discovery": "*",
+    "@testpilot/agents-application-understanding": "*",
+    "@testpilot/database": "*"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",

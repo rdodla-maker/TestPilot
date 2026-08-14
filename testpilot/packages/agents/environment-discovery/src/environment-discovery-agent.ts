@@ -2,8 +2,8 @@ import { BaseAgent } from '@testpilot/core';
 import type { ExecutionContext, AgentId } from '@testpilot/contracts';
 import { AgentError, ErrorCode, ResultStatus } from '@testpilot/contracts';
 import { BrowserTool, extractMetadataFromObservation } from '@testpilot/tools-browser';
-import type { EnvironmentDiscoveryInput, EnvironmentDiscoveryOutput, EnvironmentObservation } from './types';
 import { getMetadataLimits } from '@testpilot/config';
+import type { EnvironmentDiscoveryInput, EnvironmentDiscoveryOutput, EnvironmentObservation } from './types';
 
 /**
  * Environment Discovery Agent

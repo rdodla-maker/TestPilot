@@ -28,7 +28,8 @@ function normalizeText(s: string | null | undefined): string {
 }
 
 function safeAttr(el: any, name: string): string | null {
-  const v = el.getAttribute && el.getAttribute(name);
+  if (!el || typeof el.getAttribute !== 'function') return null;
+  const v = el.getAttribute(name);
   return v == null ? null : String(v);
 }
 

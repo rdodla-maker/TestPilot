@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ApplicationProfile {
+  id                   String              @id
+  name                 String?
+  targetUrls           Json
+  status               String              @default("active")
+  currentSnapshotId    String?
+  createdAt            DateTime            @default(now())
+  updatedAt            DateTime            @updatedAt
+  snapshots            IntelligenceSnapshot[]
+  currentSnapshot      IntelligenceSnapshot? @relation("CurrentSnapshot", fields: [currentSnapshotId], references: [id], onDelete: SetNull)
+
+  @@index([updatedAt])
+}
+
+model IntelligenceSnapshot {
+  id               String             @id
+  applicationId    String
+  schemaVersion    String
+  snapshotVersion  Int
+  sourceExecutionId String
+  generatedAt      DateTime
+  confidence       Float
+  payload          Json
+  metadata         Json
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+  application      ApplicationProfile @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  currentFor       ApplicationProfile[] @relation("CurrentSnapshot")
+
+  @@unique([applicationId, snapshotVersion])
+  @@unique([applicationId, sourceExecutionId])
+  @@index([applicationId, createdAt])
+  @@index([sourceExecutionId])
+}

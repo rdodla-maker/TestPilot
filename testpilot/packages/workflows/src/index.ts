@@ -1,1 +1,1 @@
-export * from './environment-discovery-workflow';
+export * from './environment-discovery-workflow.js';
