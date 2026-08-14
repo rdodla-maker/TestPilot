@@ -2,8 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import { createLogger } from '@testpilot/observability';
 import { getApiConfig, loadConfig } from '@testpilot/config';
-import { loggingMiddleware, errorHandler, validateJsonBody } from './middleware';
-import { createEnvironmentDiscoveryRoutes } from './routes';
+import { loggingMiddleware, errorHandler, securityHeaders, validateJsonBody } from './middleware.js';
+import { createEnvironmentDiscoveryRoutes } from './routes.js';
 
 /**
  * Start TestPilot API server
@@ -26,6 +26,7 @@ async function main() {
   const app = express();
 
   // Middleware
+  app.use(securityHeaders);
   app.use(cors({ origin: apiConfig.corsOrigins }));
   app.use(express.json({ limit: '10mb' }));
   app.use(loggingMiddleware(logger));

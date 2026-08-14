@@ -17,6 +17,7 @@ export interface ApiResponse<T = unknown> {
     timestamp: string;
     executionId?: string;
     duration?: number;
+    requestId?: string;
   };
 }
 
@@ -31,6 +32,8 @@ export interface EnvironmentDiscoveryRequest {
 /**
  * Environment Discovery API response
  */
+import type { ApplicationIntelligenceSnapshot } from '@testpilot/contracts';
+
 export interface EnvironmentDiscoveryApiResponse {
   projectId: string;
   executionId: string;
@@ -60,5 +63,13 @@ export interface EnvironmentDiscoveryApiResponse {
   metadata: {
     executionTime: number;
     toolsUsed: string[];
+  };
+  applicationMetadata?: unknown;
+  applicationIntelligence?: ApplicationIntelligenceSnapshot;
+  persistence?: {
+    status: 'persisted' | 'failed';
+    applicationId: string;
+    snapshotId?: string;
+    snapshotVersion?: number;
   };
 }

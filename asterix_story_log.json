@@ -6,6 +6,20 @@
       "llm_version": "copilot/claude-sonnet-4-6",
       "last_updated": "2026-08-13T12:48:31.667Z",
       "mode": "copilot"
+    },
+    {
+      "ticket_id": "ATHENA-3342",
+      "description": "-",
+      "llm_version": "claude-code/claude-sonnet-4-6",
+      "last_updated": "2026-08-14T13:37:38.838Z",
+      "mode": "claude"
+    },
+    {
+      "ticket_id": "ATHENA-3342",
+      "description": "-",
+      "llm_version": "copilot/claude-sonnet-4-6",
+      "last_updated": "2026-08-17T11:49:19.307Z",
+      "mode": "copilot"
     }
   ]
 }

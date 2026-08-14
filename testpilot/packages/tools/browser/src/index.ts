@@ -1,4 +1,5 @@
-export * from './browser-tool';
-export * from './types';
-export * from './url-validator';
-export * from './metadata-extractor';
+export * from './browser-tool.js';
+export * from './types.js';
+export * from './url-validator.js';
+export * from './metadata-extractor.js';
+export { extractMetadataFromObservation } from './metadata-extractor.js';
