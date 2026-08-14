@@ -1,0 +1,77 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+build/
+out/
+
+# Turbo
+.turbo/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# Runtime
+*.pid
+*.seed
+
+# Playwright
+playwright-report/
+test-results/
+blob-report/
+
+# Browser artifacts
+screenshots/
+videos/
+traces/
+
+# Generated artifacts
+artifacts/
+tmp/
+temp/
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cache
+.cache/
+.eslintcache
+
+# npm
+.npm/
+
+# Local databases
+*.sqlite
+*.sqlite3
+
+# Secrets / credentials
+*.pem
+*.key
+
+# Generated TypeScript
+*.tsbuildinfo
+
+# Local TestPilot runtime data
+.testpilot/
+testpilot-data/

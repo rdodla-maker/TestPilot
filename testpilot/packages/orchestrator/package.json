@@ -1,0 +1,25 @@
+{
+  "name": "@testpilot/orchestrator",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "lint": "eslint src/**/*.ts",
+    "test": "vitest",
+    "test:watch": "vitest --watch"
+  },
+  "dependencies": {
+    "@testpilot/contracts": "*",
+    "@testpilot/core": "*",
+    "@testpilot/config": "*",
+    "@testpilot/observability": "*",
+    "@testpilot/workflows": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.2"
+  }
+}

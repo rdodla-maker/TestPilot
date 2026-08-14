@@ -1,0 +1,71 @@
+﻿{"event":"diagnostic.start","fixture":"C:\\Users\\rdodla\\TestPilot\\testpilot\\test-fixtures\\testpage.html","dataUrlPreview":"data:text/html;base64,PCFkb2N0eXBlIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg","timestamp":"2026-08-14T13:15:00.742Z"}
+{"timestamp":"2026-08-14T13:15:00.742Z","level":"info","message":"Orchestrator execution started","context":{"executionId":"exec-1786713300742-y1iiw73","projectId":"diagnostic-project","workflowId":"environment-discovery-workflow"}}
+{"timestamp":"2026-08-14T13:15:00.742Z","level":"info","message":"Workflow Environment Discovery Workflow started","context":{"workflowId":"environment-discovery-workflow","executionId":"exec-1786713300742-y1iiw73"}}
+{"timestamp":"2026-08-14T13:15:00.743Z","level":"info","message":"Environment Discovery Workflow started","context":{"workflowId":"environment-discovery-workflow","projectId":"diagnostic-project","url":"data:text/html;base64,PCFkb2N0eXBlIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+DQogIDx0aXRsZT5UZXN0IFBhZ2UgZm9yIEVudmlyb25tZW50IERpc2NvdmVyeTwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgPG5hdj4NCiAgICA8YSBocmVmPSIvaG9tZSI+SG9tZTwvYT4NCiAgICA8YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPg0KICA8L25hdj4NCiAgPGgxPk1haW4gSGVhZGluZzwvaDE+DQogIDxoMj5TdWJoZWFkaW5nPC9oMj4NCiAgPHA+VGhpcyBpcyBhIDxhIGhyZWY9Ii9saW5rIj5saW5rPC9hPiBpbnNpZGUgYSBwYXJhZ3JhcGguPC9wPg0KICA8Zm9ybT4NCiAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic2VhcmNoIiBwbGFjZWhvbGRlcj0iU2VhcmNoIiAvPg0KICAgIDxidXR0b24gdHlwZT0ic3VibWl0Ij5HbzwvYnV0dG9uPg0KICA8L2Zvcm0+DQogIDxpbWcgc3JjPSIvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IkxvZ28iIC8+DQogIDxzY3JpcHQ+DQogICAgLy8gc2ltcGxlIGR5bmFtaWMgY29udGVudA0KICAgIGNvbnN0IGJ0biA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2J1dHRvbicpOw0KICAgIGJ0bi50ZXh0Q29udGVudCA9ICdEeW5hbWljIEJ1dHRvbic7DQogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChidG4pOw0KICA8L3NjcmlwdD4NCjwvYm9keT4NCjwvaHRtbD4="}}
+{"timestamp":"2026-08-14T13:15:00.743Z","level":"info","message":"Agent Environment Discovery Agent started","context":{"agentId":"environment-discovery-agent","executionId":"exec-1786713300742-y1iiw73"}}
+{"timestamp":"2026-08-14T13:15:00.743Z","level":"info","message":"Environment Discovery Agent starting","context":{"agentId":"environment-discovery-agent","projectId":"diagnostic-project","url":"data:text/html;base64,PCFkb2N0eXBlIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+DQogIDx0aXRsZT5UZXN0IFBhZ2UgZm9yIEVudmlyb25tZW50IERpc2NvdmVyeTwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgPG5hdj4NCiAgICA8YSBocmVmPSIvaG9tZSI+SG9tZTwvYT4NCiAgICA8YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPg0KICA8L25hdj4NCiAgPGgxPk1haW4gSGVhZGluZzwvaDE+DQogIDxoMj5TdWJoZWFkaW5nPC9oMj4NCiAgPHA+VGhpcyBpcyBhIDxhIGhyZWY9Ii9saW5rIj5saW5rPC9hPiBpbnNpZGUgYSBwYXJhZ3JhcGguPC9wPg0KICA8Zm9ybT4NCiAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic2VhcmNoIiBwbGFjZWhvbGRlcj0iU2VhcmNoIiAvPg0KICAgIDxidXR0b24gdHlwZT0ic3VibWl0Ij5HbzwvYnV0dG9uPg0KICA8L2Zvcm0+DQogIDxpbWcgc3JjPSIvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IkxvZ28iIC8+DQogIDxzY3JpcHQ+DQogICAgLy8gc2ltcGxlIGR5bmFtaWMgY29udGVudA0KICAgIGNvbnN0IGJ0biA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2J1dHRvbicpOw0KICAgIGJ0bi50ZXh0Q29udGVudCA9ICdEeW5hbWljIEJ1dHRvbic7DQogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChidG4pOw0KICA8L3NjcmlwdD4NCjwvYm9keT4NCjwvaHRtbD4="}}
+{"timestamp":"2026-08-14T13:15:00.743Z","level":"info","message":"Initiating page observation","context":{"url":"data:text/html;base64,PCFkb2N0eXBlIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+DQogIDx0aXRsZT5UZXN0IFBhZ2UgZm9yIEVudmlyb25tZW50IERpc2NvdmVyeTwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgPG5hdj4NCiAgICA8YSBocmVmPSIvaG9tZSI+SG9tZTwvYT4NCiAgICA8YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPg0KICA8L25hdj4NCiAgPGgxPk1haW4gSGVhZGluZzwvaDE+DQogIDxoMj5TdWJoZWFkaW5nPC9oMj4NCiAgPHA+VGhpcyBpcyBhIDxhIGhyZWY9Ii9saW5rIj5saW5rPC9hPiBpbnNpZGUgYSBwYXJhZ3JhcGguPC9wPg0KICA8Zm9ybT4NCiAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic2VhcmNoIiBwbGFjZWhvbGRlcj0iU2VhcmNoIiAvPg0KICAgIDxidXR0b24gdHlwZT0ic3VibWl0Ij5HbzwvYnV0dG9uPg0KICA8L2Zvcm0+DQogIDxpbWcgc3JjPSIvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IkxvZ28iIC8+DQogIDxzY3JpcHQ+DQogICAgLy8gc2ltcGxlIGR5bmFtaWMgY29udGVudA0KICAgIGNvbnN0IGJ0biA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2J1dHRvbicpOw0KICAgIGJ0bi50ZXh0Q29udGVudCA9ICdEeW5hbWljIEJ1dHRvbic7DQogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChidG4pOw0KICA8L3NjcmlwdD4NCjwvYm9keT4NCjwvaHRtbD4="}}
+{"timestamp":"2026-08-14T13:15:01.608Z","level":"info","message":"Environment Discovery Agent completed successfully","context":{"agentId":"environment-discovery-agent","projectId":"diagnostic-project","url":"data:text/html;base64,PCFkb2N0eXBlIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+DQogIDx0aXRsZT5UZXN0IFBhZ2UgZm9yIEVudmlyb25tZW50IERpc2NvdmVyeTwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgPG5hdj4NCiAgICA8YSBocmVmPSIvaG9tZSI+SG9tZTwvYT4NCiAgICA8YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPg0KICA8L25hdj4NCiAgPGgxPk1haW4gSGVhZGluZzwvaDE+DQogIDxoMj5TdWJoZWFkaW5nPC9oMj4NCiAgPHA+VGhpcyBpcyBhIDxhIGhyZWY9Ii9saW5rIj5saW5rPC9hPiBpbnNpZGUgYSBwYXJhZ3JhcGguPC9wPg0KICA8Zm9ybT4NCiAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic2VhcmNoIiBwbGFjZWhvbGRlcj0iU2VhcmNoIiAvPg0KICAgIDxidXR0b24gdHlwZT0ic3VibWl0Ij5HbzwvYnV0dG9uPg0KICA8L2Zvcm0+DQogIDxpbWcgc3JjPSIvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IkxvZ28iIC8+DQogIDxzY3JpcHQ+DQogICAgLy8gc2ltcGxlIGR5bmFtaWMgY29udGVudA0KICAgIGNvbnN0IGJ0biA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2J1dHRvbicpOw0KICAgIGJ0bi50ZXh0Q29udGVudCA9ICdEeW5hbWljIEJ1dHRvbic7DQogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChidG4pOw0KICA8L3NjcmlwdD4NCjwvYm9keT4NCjwvaHRtbD4=","executionTime":865}}
+{"timestamp":"2026-08-14T13:15:01.645Z","level":"info","message":"Agent Environment Discovery Agent completed successfully","context":{"agentId":"environment-discovery-agent","executionId":"exec-1786713300742-y1iiw73","duration":902}}
+{"timestamp":"2026-08-14T13:15:01.645Z","level":"info","message":"Environment Discovery Agent completed","context":{"status":"success","projectId":"diagnostic-project"}}
+{"timestamp":"2026-08-14T13:15:01.645Z","level":"info","message":"Workflow Environment Discovery Workflow completed successfully","context":{"workflowId":"environment-discovery-workflow","executionId":"exec-1786713300742-y1iiw73","duration":903}}
+{"timestamp":"2026-08-14T13:15:01.645Z","level":"info","message":"Orchestrator execution completed","context":{"executionId":"exec-1786713300742-y1iiw73","projectId":"diagnostic-project","status":"success","duration":903}}
+{"event":"diagnostic.completed","resultStatus":"success","duration":903,"timestamp":"2026-08-14T13:15:01.645Z"}
+Full result: {
+  "executionId": "exec-1786713300742-y1iiw73",
+  "projectId": "diagnostic-project",
+  "workflowId": "environment-discovery-workflow",
+  "result": {
+    "status": "success",
+    "data": {
+      "projectId": "diagnostic-project",
+      "discovery": {
+        "status": "success",
+        "data": {
+          "status": "success",
+          "observation": {
+            "projectId": "diagnostic-project",
+            "requestedUrl": "data:text/html;base64,PCFkb2N0eXBlIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+DQogIDx0aXRsZT5UZXN0IFBhZ2UgZm9yIEVudmlyb25tZW50IERpc2NvdmVyeTwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgPG5hdj4NCiAgICA8YSBocmVmPSIvaG9tZSI+SG9tZTwvYT4NCiAgICA8YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPg0KICA8L25hdj4NCiAgPGgxPk1haW4gSGVhZGluZzwvaDE+DQogIDxoMj5TdWJoZWFkaW5nPC9oMj4NCiAgPHA+VGhpcyBpcyBhIDxhIGhyZWY9Ii9saW5rIj5saW5rPC9hPiBpbnNpZGUgYSBwYXJhZ3JhcGguPC9wPg0KICA8Zm9ybT4NCiAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic2VhcmNoIiBwbGFjZWhvbGRlcj0iU2VhcmNoIiAvPg0KICAgIDxidXR0b24gdHlwZT0ic3VibWl0Ij5HbzwvYnV0dG9uPg0KICA8L2Zvcm0+DQogIDxpbWcgc3JjPSIvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IkxvZ28iIC8+DQogIDxzY3JpcHQ+DQogICAgLy8gc2ltcGxlIGR5bmFtaWMgY29udGVudA0KICAgIGNvbnN0IGJ0biA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2J1dHRvbicpOw0KICAgIGJ0bi50ZXh0Q29udGVudCA9ICdEeW5hbWljIEJ1dHRvbic7DQogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChidG4pOw0KICA8L3NjcmlwdD4NCjwvYm9keT4NCjwvaHRtbD4=",
+            "finalUrl": "data:text/html;base64,PCFkb2N0eXBlIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+DQogIDx0aXRsZT5UZXN0IFBhZ2UgZm9yIEVudmlyb25tZW50IERpc2NvdmVyeTwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgPG5hdj4NCiAgICA8YSBocmVmPSIvaG9tZSI+SG9tZTwvYT4NCiAgICA8YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPg0KICA8L25hdj4NCiAgPGgxPk1haW4gSGVhZGluZzwvaDE+DQogIDxoMj5TdWJoZWFkaW5nPC9oMj4NCiAgPHA+VGhpcyBpcyBhIDxhIGhyZWY9Ii9saW5rIj5saW5rPC9hPiBpbnNpZGUgYSBwYXJhZ3JhcGguPC9wPg0KICA8Zm9ybT4NCiAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic2VhcmNoIiBwbGFjZWhvbGRlcj0iU2VhcmNoIiAvPg0KICAgIDxidXR0b24gdHlwZT0ic3VibWl0Ij5HbzwvYnV0dG9uPg0KICA8L2Zvcm0+DQogIDxpbWcgc3JjPSIvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IkxvZ28iIC8+DQogIDxzY3JpcHQ+DQogICAgLy8gc2ltcGxlIGR5bmFtaWMgY29udGVudA0KICAgIGNvbnN0IGJ0biA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2J1dHRvbicpOw0KICAgIGJ0bi50ZXh0Q29udGVudCA9ICdEeW5hbWljIEJ1dHRvbic7DQogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChidG4pOw0KICA8L3NjcmlwdD4NCjwvYm9keT4NCjwvaHRtbD4=",
+            "title": "Test Page for Environment Discovery",
+            "browserInfo": {
+              "name": "chromium",
+              "version": "latest",
+              "headless": true
+            },
+            "viewport": {
+              "width": 1920,
+              "height": 1080
+            },
+            "html": "<!DOCTYPE html><html><head>\n  <meta charset=\"utf-8\">\n  <title>Test Page for Environment Discovery</title>\n</head>\n<body>\n  <nav>\n    <a href=\"/home\">Home</a>\n    <a href=\"/about\">About</a>\n  </nav>\n  <h1>Main Heading</h1>\n  <h2>Subheading</h2>\n  <p>This is a <a href=\"/link\">link</a> inside a paragraph.</p>\n  <form>\n    <input type=\"text\" name=\"search\" placeholder=\"Search\">\n    <button type=\"submit\">Go</button>\n  </form>\n  <img src=\"/images/logo.png\" alt=\"Logo\">\n  <script>\n    // simple dynamic content\n    const btn = document.createElement('button');\n    btn.textContent = 'Dynamic Button';\n    document.body.appendChild(btn);\n  </script><button>Dynamic Button</button>\n\n</body></html>",
+            "screenshot": {
+              "path": "/tmp/testpilot-screenshot-2026-08-14T13-15-01-560Z.png"
+            },
+            "loadDuration": 525,
+            "timestamp": "2026-08-14T13:15:01.602Z"
+          },
+          "metadata": {
+            "executionTime": 865,
+            "toolsUsed": [
+              "BrowserTool"
+            ]
+          }
+        },
+        "metadata": {
+          "startTime": "2026-08-14T13:15:00.743Z",
+          "endTime": "2026-08-14T13:15:01.645Z",
+          "duration": 902,
+          "executionId": "unknown"
+        }
+      }
+    },
+    "metadata": {
+      "startTime": "2026-08-14T13:15:00.742Z",
+      "endTime": "2026-08-14T13:15:01.645Z",
+      "duration": 903,
+      "executionId": "unknown",
+      "steps": []
+    }
+  },
+  "duration": 903
+}
