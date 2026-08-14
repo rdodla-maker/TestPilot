@@ -1,0 +1,57 @@
+﻿{"level":"info","message":"Agent Environment Discovery Agent started","context":{"agentId":"environment-discovery-agent","executionId":"direct-test-1"}}
+{"level":"info","message":"Environment Discovery Agent starting","context":{"agentId":"environment-discovery-agent","projectId":"diag","url":"data:text/html;base64,PCFkb2N0eXBlIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+DQogIDx0aXRsZT5UZXN0IFBhZ2UgZm9yIEVudmlyb25tZW50IERpc2NvdmVyeTwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgPG5hdj4NCiAgICA8YSBocmVmPSIvaG9tZSI+SG9tZTwvYT4NCiAgICA8YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPg0KICA8L25hdj4NCiAgPGgxPk1haW4gSGVhZGluZzwvaDE+DQogIDxoMj5TdWJoZWFkaW5nPC9oMj4NCiAgPHA+VGhpcyBpcyBhIDxhIGhyZWY9Ii9saW5rIj5saW5rPC9hPiBpbnNpZGUgYSBwYXJhZ3JhcGguPC9wPg0KICA8Zm9ybT4NCiAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic2VhcmNoIiBwbGFjZWhvbGRlcj0iU2VhcmNoIiAvPg0KICAgIDxidXR0b24gdHlwZT0ic3VibWl0Ij5HbzwvYnV0dG9uPg0KICA8L2Zvcm0+DQogIDxpbWcgc3JjPSIvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IkxvZ28iIC8+DQogIDxzY3JpcHQ+DQogICAgLy8gc2ltcGxlIGR5bmFtaWMgY29udGVudA0KICAgIGNvbnN0IGJ0biA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2J1dHRvbicpOw0KICAgIGJ0bi50ZXh0Q29udGVudCA9ICdEeW5hbWljIEJ1dHRvbic7DQogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChidG4pOw0KICA8L3NjcmlwdD4NCjwvYm9keT4NCjwvaHRtbD4="}}
+{"level":"debug","message":"Input validation passed","context":{"projectId":"diag"}}
+{"level":"info","message":"Initiating page observation","context":{"url":"data:text/html;base64,PCFkb2N0eXBlIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+DQogIDx0aXRsZT5UZXN0IFBhZ2UgZm9yIEVudmlyb25tZW50IERpc2NvdmVyeTwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgPG5hdj4NCiAgICA8YSBocmVmPSIvaG9tZSI+SG9tZTwvYT4NCiAgICA8YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPg0KICA8L25hdj4NCiAgPGgxPk1haW4gSGVhZGluZzwvaDE+DQogIDxoMj5TdWJoZWFkaW5nPC9oMj4NCiAgPHA+VGhpcyBpcyBhIDxhIGhyZWY9Ii9saW5rIj5saW5rPC9hPiBpbnNpZGUgYSBwYXJhZ3JhcGguPC9wPg0KICA8Zm9ybT4NCiAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic2VhcmNoIiBwbGFjZWhvbGRlcj0iU2VhcmNoIiAvPg0KICAgIDxidXR0b24gdHlwZT0ic3VibWl0Ij5HbzwvYnV0dG9uPg0KICA8L2Zvcm0+DQogIDxpbWcgc3JjPSIvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IkxvZ28iIC8+DQogIDxzY3JpcHQ+DQogICAgLy8gc2ltcGxlIGR5bmFtaWMgY29udGVudA0KICAgIGNvbnN0IGJ0biA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2J1dHRvbicpOw0KICAgIGJ0bi50ZXh0Q29udGVudCA9ICdEeW5hbWljIEJ1dHRvbic7DQogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChidG4pOw0KICA8L3NjcmlwdD4NCjwvYm9keT4NCjwvaHRtbD4="}}
+{"level":"info","message":"BrowserTool.execute about to be called","context":{"tool":"BrowserTool","executionId":"direct-test-1"}}
+{"event":"agent.browserTool.execute.start","agent":"environment-discovery-agent","executionId":"direct-test-1","url":"data:text/html;base64,PCFkb2N0eXBlIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+DQogIDx0aXRsZT5UZXN0IFBhZ2UgZm9yIEVudmlyb25tZW50IERpc2NvdmVyeTwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgPG5hdj4NCiAgICA8YSBocmVmPSIvaG9tZSI+SG9tZTwvYT4NCiAgICA8YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPg0KICA8L25hdj4NCiAgPGgxPk1haW4gSGVhZGluZzwvaDE+DQogIDxoMj5TdWJoZWFkaW5nPC9oMj4NCiAgPHA+VGhpcyBpcyBhIDxhIGhyZWY9Ii9saW5rIj5saW5rPC9hPiBpbnNpZGUgYSBwYXJhZ3JhcGguPC9wPg0KICA8Zm9ybT4NCiAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic2VhcmNoIiBwbGFjZWhvbGRlcj0iU2VhcmNoIiAvPg0KICAgIDxidXR0b24gdHlwZT0ic3VibWl0Ij5HbzwvYnV0dG9uPg0KICA8L2Zvcm0+DQogIDxpbWcgc3JjPSIvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IkxvZ28iIC8+DQogIDxzY3JpcHQ+DQogICAgLy8gc2ltcGxlIGR5bmFtaWMgY29udGVudA0KICAgIGNvbnN0IGJ0biA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2J1dHRvbicpOw0KICAgIGJ0bi50ZXh0Q29udGVudCA9ICdEeW5hbWljIEJ1dHRvbic7DQogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChidG4pOw0KICA8L3NjcmlwdD4NCjwvYm9keT4NCjwvaHRtbD4=","timestamp":"2026-08-14T13:15:44.169Z"}
+{"event":"agent.afterObservation","agent":"environment-discovery-agent","executionId":"direct-test-1","title":"Test Page for Environment Discovery","finalUrl":"data:text/html;base64,PCFkb2N0eXBlIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+DQogIDx0aXRsZT5UZXN0IFBhZ2UgZm9yIEVudmlyb25tZW50IERpc2NvdmVyeTwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgPG5hdj4NCiAgICA8YSBocmVmPSIvaG9tZSI+SG9tZTwvYT4NCiAgICA8YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPg0KICA8L25hdj4NCiAgPGgxPk1haW4gSGVhZGluZzwvaDE+DQogIDxoMj5TdWJoZWFkaW5nPC9oMj4NCiAgPHA+VGhpcyBpcyBhIDxhIGhyZWY9Ii9saW5rIj5saW5rPC9hPiBpbnNpZGUgYSBwYXJhZ3JhcGguPC9wPg0KICA8Zm9ybT4NCiAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic2VhcmNoIiBwbGFjZWhvbGRlcj0iU2VhcmNoIiAvPg0KICAgIDxidXR0b24gdHlwZT0ic3VibWl0Ij5HbzwvYnV0dG9uPg0KICA8L2Zvcm0+DQogIDxpbWcgc3JjPSIvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IkxvZ28iIC8+DQogIDxzY3JpcHQ+DQogICAgLy8gc2ltcGxlIGR5bmFtaWMgY29udGVudA0KICAgIGNvbnN0IGJ0biA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2J1dHRvbicpOw0KICAgIGJ0bi50ZXh0Q29udGVudCA9ICdEeW5hbWljIEJ1dHRvbic7DQogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChidG4pOw0KICA8L3NjcmlwdD4NCjwvYm9keT4NCjwvaHRtbD4=","htmlLength":692,"timestamp":"2026-08-14T13:15:44.169Z"}
+{"level":"warn","message":"Metadata extraction failed","context":{"error":"(0 , import_config.getMetadataLimits) is not a function"}}
+{"event":"agent.extractor.call.error","agent":"environment-discovery-agent","executionId":"direct-test-1","error":"(0 , import_config.getMetadataLimits) is not a function","extractorType":"undefined","timestamp":"2026-08-14T13:15:44.171Z"}
+{"level":"info","message":"Environment Discovery Agent completed successfully","context":{"agentId":"environment-discovery-agent","projectId":"diag","url":"data:text/html;base64,PCFkb2N0eXBlIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+DQogIDx0aXRsZT5UZXN0IFBhZ2UgZm9yIEVudmlyb25tZW50IERpc2NvdmVyeTwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgPG5hdj4NCiAgICA8YSBocmVmPSIvaG9tZSI+SG9tZTwvYT4NCiAgICA8YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPg0KICA8L25hdj4NCiAgPGgxPk1haW4gSGVhZGluZzwvaDE+DQogIDxoMj5TdWJoZWFkaW5nPC9oMj4NCiAgPHA+VGhpcyBpcyBhIDxhIGhyZWY9Ii9saW5rIj5saW5rPC9hPiBpbnNpZGUgYSBwYXJhZ3JhcGguPC9wPg0KICA8Zm9ybT4NCiAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic2VhcmNoIiBwbGFjZWhvbGRlcj0iU2VhcmNoIiAvPg0KICAgIDxidXR0b24gdHlwZT0ic3VibWl0Ij5HbzwvYnV0dG9uPg0KICA8L2Zvcm0+DQogIDxpbWcgc3JjPSIvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IkxvZ28iIC8+DQogIDxzY3JpcHQ+DQogICAgLy8gc2ltcGxlIGR5bmFtaWMgY29udGVudA0KICAgIGNvbnN0IGJ0biA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2J1dHRvbicpOw0KICAgIGJ0bi50ZXh0Q29udGVudCA9ICdEeW5hbWljIEJ1dHRvbic7DQogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChidG4pOw0KICA8L3NjcmlwdD4NCjwvYm9keT4NCjwvaHRtbD4=","executionTime":2}}
+{"event":"agent.result.preReturn","agent":"environment-discovery-agent","executionId":"direct-test-1","hasApplicationMetadata":false,"applicationMetadataSummary":null,"timestamp":"2026-08-14T13:15:44.171Z"}
+{"event":"agent.cleanup.called","agent":"environment-discovery-agent","executionId":"direct-test-1","timestamp":"2026-08-14T13:15:44.171Z"}
+{"level":"info","message":"Agent Environment Discovery Agent completed successfully","context":{"agentId":"environment-discovery-agent","executionId":"direct-test-1","duration":3}}
+Direct agent result: {
+  "status": "success",
+  "data": {
+    "status": "success",
+    "observation": {
+      "projectId": "diag",
+      "requestedUrl": "data:text/html;base64,PCFkb2N0eXBlIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+DQogIDx0aXRsZT5UZXN0IFBhZ2UgZm9yIEVudmlyb25tZW50IERpc2NvdmVyeTwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgPG5hdj4NCiAgICA8YSBocmVmPSIvaG9tZSI+SG9tZTwvYT4NCiAgICA8YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPg0KICA8L25hdj4NCiAgPGgxPk1haW4gSGVhZGluZzwvaDE+DQogIDxoMj5TdWJoZWFkaW5nPC9oMj4NCiAgPHA+VGhpcyBpcyBhIDxhIGhyZWY9Ii9saW5rIj5saW5rPC9hPiBpbnNpZGUgYSBwYXJhZ3JhcGguPC9wPg0KICA8Zm9ybT4NCiAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic2VhcmNoIiBwbGFjZWhvbGRlcj0iU2VhcmNoIiAvPg0KICAgIDxidXR0b24gdHlwZT0ic3VibWl0Ij5HbzwvYnV0dG9uPg0KICA8L2Zvcm0+DQogIDxpbWcgc3JjPSIvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IkxvZ28iIC8+DQogIDxzY3JpcHQ+DQogICAgLy8gc2ltcGxlIGR5bmFtaWMgY29udGVudA0KICAgIGNvbnN0IGJ0biA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2J1dHRvbicpOw0KICAgIGJ0bi50ZXh0Q29udGVudCA9ICdEeW5hbWljIEJ1dHRvbic7DQogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChidG4pOw0KICA8L3NjcmlwdD4NCjwvYm9keT4NCjwvaHRtbD4=",
+      "finalUrl": "data:text/html;base64,PCFkb2N0eXBlIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+DQogIDx0aXRsZT5UZXN0IFBhZ2UgZm9yIEVudmlyb25tZW50IERpc2NvdmVyeTwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgPG5hdj4NCiAgICA8YSBocmVmPSIvaG9tZSI+SG9tZTwvYT4NCiAgICA8YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPg0KICA8L25hdj4NCiAgPGgxPk1haW4gSGVhZGluZzwvaDE+DQogIDxoMj5TdWJoZWFkaW5nPC9oMj4NCiAgPHA+VGhpcyBpcyBhIDxhIGhyZWY9Ii9saW5rIj5saW5rPC9hPiBpbnNpZGUgYSBwYXJhZ3JhcGguPC9wPg0KICA8Zm9ybT4NCiAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic2VhcmNoIiBwbGFjZWhvbGRlcj0iU2VhcmNoIiAvPg0KICAgIDxidXR0b24gdHlwZT0ic3VibWl0Ij5HbzwvYnV0dG9uPg0KICA8L2Zvcm0+DQogIDxpbWcgc3JjPSIvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IkxvZ28iIC8+DQogIDxzY3JpcHQ+DQogICAgLy8gc2ltcGxlIGR5bmFtaWMgY29udGVudA0KICAgIGNvbnN0IGJ0biA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2J1dHRvbicpOw0KICAgIGJ0bi50ZXh0Q29udGVudCA9ICdEeW5hbWljIEJ1dHRvbic7DQogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChidG4pOw0KICA8L3NjcmlwdD4NCjwvYm9keT4NCjwvaHRtbD4=",
+      "title": "Test Page for Environment Discovery",
+      "browserInfo": {
+        "name": "chromium",
+        "version": "latest",
+        "headless": true
+      },
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "html": "<!doctype html>\r\n<html>\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title>Test Page for Environment Discovery</title>\r\n</head>\r\n<body>\r\n  <nav>\r\n    <a href=\"/home\">Home</a>\r\n    <a href=\"/about\">About</a>\r\n  </nav>\r\n  <h1>Main Heading</h1>\r\n  <h2>Subheading</h2>\r\n  <p>This is a <a href=\"/link\">link</a> inside a paragraph.</p>\r\n  <form>\r\n    <input type=\"text\" name=\"search\" placeholder=\"Search\" />\r\n    <button type=\"submit\">Go</button>\r\n  </form>\r\n  <img src=\"/images/logo.png\" alt=\"Logo\" />\r\n  <script>\r\n    // simple dynamic content\r\n    const btn = document.createElement('button');\r\n    btn.textContent = 'Dynamic Button';\r\n    document.body.appendChild(btn);\r\n  </script>\r\n</body>\r\n</html>",
+      "screenshot": {
+        "path": "/tmp/fake.png"
+      },
+      "navigationStatus": {
+        "status": 200,
+        "statusText": "OK",
+        "url": "data:text/html;base64,PCFkb2N0eXBlIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+DQogIDx0aXRsZT5UZXN0IFBhZ2UgZm9yIEVudmlyb25tZW50IERpc2NvdmVyeTwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAgPG5hdj4NCiAgICA8YSBocmVmPSIvaG9tZSI+SG9tZTwvYT4NCiAgICA8YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPg0KICA8L25hdj4NCiAgPGgxPk1haW4gSGVhZGluZzwvaDE+DQogIDxoMj5TdWJoZWFkaW5nPC9oMj4NCiAgPHA+VGhpcyBpcyBhIDxhIGhyZWY9Ii9saW5rIj5saW5rPC9hPiBpbnNpZGUgYSBwYXJhZ3JhcGguPC9wPg0KICA8Zm9ybT4NCiAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic2VhcmNoIiBwbGFjZWhvbGRlcj0iU2VhcmNoIiAvPg0KICAgIDxidXR0b24gdHlwZT0ic3VibWl0Ij5HbzwvYnV0dG9uPg0KICA8L2Zvcm0+DQogIDxpbWcgc3JjPSIvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IkxvZ28iIC8+DQogIDxzY3JpcHQ+DQogICAgLy8gc2ltcGxlIGR5bmFtaWMgY29udGVudA0KICAgIGNvbnN0IGJ0biA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2J1dHRvbicpOw0KICAgIGJ0bi50ZXh0Q29udGVudCA9ICdEeW5hbWljIEJ1dHRvbic7DQogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChidG4pOw0KICA8L3NjcmlwdD4NCjwvYm9keT4NCjwvaHRtbD4="
+      },
+      "loadDuration": 100,
+      "timestamp": "2026-08-14T13:15:44.168Z"
+    },
+    "metadata": {
+      "executionTime": 2,
+      "toolsUsed": [
+        "BrowserTool"
+      ]
+    }
+  },
+  "metadata": {
+    "startTime": "2026-08-14T13:15:44.168Z",
+    "endTime": "2026-08-14T13:15:44.171Z",
+    "duration": 3,
+    "executionId": "unknown"
+  }
+}
