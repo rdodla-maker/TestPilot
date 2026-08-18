@@ -2,6 +2,7 @@
   "name": "@testpilot/ai-provider",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "main": "dist/ai-provider/src/index.js",
   "types": "dist/ai-provider/src/index.d.ts",
   "scripts": {

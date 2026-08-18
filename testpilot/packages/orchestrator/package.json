@@ -2,6 +2,7 @@
   "name": "@testpilot/orchestrator",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "main": "dist/orchestrator/src/index.js",
   "types": "dist/orchestrator/src/index.d.ts",
   "scripts": {

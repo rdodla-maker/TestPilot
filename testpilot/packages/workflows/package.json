@@ -2,6 +2,7 @@
   "name": "@testpilot/workflows",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "main": "dist/workflows/src/index.js",
   "types": "dist/workflows/src/index.d.ts",
   "scripts": {
